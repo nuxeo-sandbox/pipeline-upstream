@@ -4,6 +4,5 @@ node {
      step ([$class: 'CopyArtifact',
                 projectName: 'downstream',
                 mapper: [$class: 'FlattenDirectoriesArtifactNameMapper'],
-                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false],
-                filter: '**/*.txt'])
+                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false])
 }

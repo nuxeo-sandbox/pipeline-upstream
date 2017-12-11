@@ -6,8 +6,8 @@ node {
                 projectName: 'sourceproject',
                 from: 'pipeline-upstream/master',
                 mapper: [$class: 'FlattenDirectoriesArtifactNameMapper'],
-                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false, upstreamFilterStrategy: 'UseNewest'],
-                filter: 'placeholder*'])
+                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false])
+//                filter: 'placeholder*'])
     } catch (IOException cause) {
         echo 'artifact unavailable'
     }

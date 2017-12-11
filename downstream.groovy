@@ -4,7 +4,7 @@ node {
      step ([$class: 'CopyArtifact',
                 projectName: 'downstream',
                 mapper: [$class: 'FlattenDirectoriesArtifactNameMapper'],
-                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false])
+                selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false]])
      } catch (IOException cause) {
        echo cause
        throw cause

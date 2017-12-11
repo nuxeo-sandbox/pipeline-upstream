@@ -5,6 +5,7 @@ node {
         step ([$class: 'CopyArtifact',
                 projectName: 'sourceproject',
                 from: 'pipeline-upstream/master',
+                target: 'upstream',
                 mapper: [$class: 'FlattenDirectoriesArtifactNameMapper'],
                 selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false]])
 //                filter: 'placeholder*'])

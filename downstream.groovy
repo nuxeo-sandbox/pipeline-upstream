@@ -8,7 +8,7 @@ node {
                 target: 'upstream',
                 mapper: [$class: 'FlattenDirectoriesArtifactNameMapper'],
                 selector: [$class: 'TriggeredBuildSelector', fallbackToLastSuccessful: false],
-                filter: 'placeholder*'])
+                filter: '**/*.txt'])
     } catch (IOException cause) {
         echo 'artifact unavailable'
     }
